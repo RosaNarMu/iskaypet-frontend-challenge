@@ -1,9 +1,10 @@
 import React from 'react'
+import ToDoList from './views/ToDoList'
 
 export const TestFrontend = () => {
     return (
         <div>
-            <h1>Mis tareas</h1>
+            <ToDoList />
         </div>
     )
 }
