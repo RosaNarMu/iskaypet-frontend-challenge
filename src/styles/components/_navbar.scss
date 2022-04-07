@@ -1,0 +1,13 @@
+.navbar-container{
+    background-color: $neutral-00;
+   
+    overflow-x: scroll;
+    
+    scrollbar-width: none;  
+}
+
+.navbar-container:hover{
+    cursor:pointer;
+}
+
+
