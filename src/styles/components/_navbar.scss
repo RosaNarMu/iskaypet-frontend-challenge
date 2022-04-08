@@ -2,12 +2,41 @@
     background-color: $neutral-00;
    
     overflow-x: scroll;
+    scrollbar-width: none; 
+   
+    display: flex;
     
-    scrollbar-width: none;  
+    padding-left: 0.75rem;
+    gap: 1.5rem;
+
+    align-items: center;
+    text-align: center;
+
+   li {
+    white-space: nowrap;
+    padding-top:13px;
+    padding-bottom: 11px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+
+    font-weight: 600;
+    color: $neutral-60;
+  
+   }
+   .active{
+    font-weight: 700;
+    color: $primary-main;
+
+    border-bottom-style: solid;
+    }
+
 }
 
 .navbar-container:hover{
     cursor:pointer;
 }
+
+
 
 
