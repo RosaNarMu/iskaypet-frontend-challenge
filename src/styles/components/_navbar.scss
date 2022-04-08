@@ -1,10 +1,10 @@
 .navbar{
-    position: absolute;
+    
     overflow-x: scroll;
     scrollbar-width: none; 
     background-color: $neutral-00;
 
-    box-shadow: 3px 3px 3px rgba(71, 67, 67, 0.185);
+    box-shadow: 0px 3px 2px rgba(71, 67, 67, 0.192);
 }
 
 
@@ -15,7 +15,6 @@
     gap: 1.5rem;
 
   
-    
    li {
     white-space: nowrap;
     padding-top:13px;
@@ -26,8 +25,12 @@
 
     font-weight: 600;
     color: $neutral-60;
-  
    }
+
+   li:hover{
+    cursor:pointer;
+    }
+
    .active{
     font-weight: 700;
     color: $primary-main;
@@ -37,9 +40,6 @@
 
 }
 
-.navbar-container:hover{
-    cursor:pointer;
-}
 
 
 
