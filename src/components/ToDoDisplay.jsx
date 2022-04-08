@@ -23,9 +23,13 @@ export default function ToDoDisplay() {
                             <span>Tarea {id}</span>
                             <p>{title}</p>
                         </div>
-                        <img src="/assets/trash 1.png" alt="Delete icon" className='todo-delete' />
+                        <button>
+
+                            <img src="/assets/trash 1.png" alt="Delete icon" className='todo-delete' />
+                        </button>
                     </div>
                 ))}
+                <button className='todo-add-btn' >Añadir tarea</button>
             </div>
         </main>
     )

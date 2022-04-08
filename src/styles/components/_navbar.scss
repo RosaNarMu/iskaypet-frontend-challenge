@@ -12,6 +12,7 @@
     display: flex;
     
     padding-left: 0.75rem;
+    
     gap: 1.5rem;
 
   
@@ -29,6 +30,9 @@
 
    li:hover{
     cursor:pointer;
+
+    border-color: $primary-main;
+    border-bottom-style: solid;
     }
 
    .active{

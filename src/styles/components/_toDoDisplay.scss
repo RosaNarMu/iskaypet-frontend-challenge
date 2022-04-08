@@ -54,13 +54,45 @@ span{
         }
     }
 
+    button {
+        all: unset;
+    }
+
     .todo-delete{
         width: 18px;
         height: 18px;
         padding-right: 18px;
+
+        transition: transform .2s;
     }
 
     .todo-delete:hover{
         cursor:pointer;
-        }
+        transform: scale(1.2);
+    }
+}
+
+.todo-add-btn{
+    all: unset;
+    margin-top: 48px;
+
+    width: 100%;
+
+    background-color: $primary-main;
+
+    text-align: center;
+    color: $neutral-00;
+    font-weight: 600;
+    font-size: 16px;
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    border-radius: 5px;
+
+}
+
+.todo-add-btn:hover{
+    cursor:pointer;
+    background-color: $primary-light;
 }
