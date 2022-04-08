@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import AddToDo from "../views/AddToDo";
 
 export default function ToDoDisplay() {
 
     const [todos, setTodos] = useState([]);
+
+    const [isOpen, setIsOpen] = useState(false)
+
 
     useEffect(() => {
         const axiosTodos = async () => {
@@ -12,6 +16,10 @@ export default function ToDoDisplay() {
         };
         axiosTodos();
     }, []);
+
+    const togglePopup = () => {
+        setIsOpen(!isOpen);
+    };
 
     return (
         <main>
@@ -29,8 +37,14 @@ export default function ToDoDisplay() {
                         </button>
                     </div>
                 ))}
-                <button className='todo-add-btn' >Añadir tarea</button>
+                <button className='todo-add-btn' onClick={togglePopup}>Añadir tarea</button>
             </div>
+
+            {isOpen && <AddToDo
+                togglePopup={togglePopup}
+            />
+            }
+
         </main>
     )
 }
