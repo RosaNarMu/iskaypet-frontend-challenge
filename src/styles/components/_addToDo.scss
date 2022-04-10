@@ -1,19 +1,19 @@
 .popup-box{
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.637);
+    background-color: $second-view;
     left: 0;
     top: 0;
     width: 100%;
     height: 100vh;
+
+    display: flex;
+    justify-content: center;
 }
 
 .box{
     position: relative;
-    width: 340px;
-
-    left: 16px;
     top: 27px;
-
+    height: fit-content;
     background-color: $neutral-00;
     border-radius: 5px;
     padding:  20px;
@@ -21,25 +21,21 @@
 
     .add-todo-title{
         display: block;
-
         font-weight: 700;
         font-size: 20px;
         color:$neutral-80;
-
         margin-bottom: 34px;
     }
 }
 
+.btn-close-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
 .btn-close {
     all: unset;
-
-    cursor:pointer;
-    
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    left: 342px;
-    top: 17px;
+    cursor:pointer; 
 }
 
 .add-todo-form{
@@ -53,69 +49,89 @@
 
         display: block;
         margin-bottom: 8px;
-
         margin-top: 4px;
     }
 
     .add-todo-input{
         margin-bottom: 20px;
-
-        border: 1px solid $neutral-20;
-
+        border: 1px solid $input;
         border-radius: 5px;
-
 
         padding-top: 9px;
         padding-bottom: 9px;
-        
         padding-left:18px;   
     }
 
     .description{
         height: 140px;
-        
-     }
+    }
 
     .add-todo-input::placeholder{
         color: $neutral-20;
+    }
 
+    .add-todo-complete-field{
+        text-align: center;
+        font-weight: 600;
+        font-size: 15px;
+
+        margin-top: 1rem;
     }
 }
 
 .add-todo-form-btn-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
     button{
         all:unset;
-
         height: 36px;
         width: 163px;
-
-        text-align: center;
-
-        font-weight: 600;
-        font-size: 15px;
-
         margin-bottom: 0.5rem;
 
+        text-align: center;
+        font-weight: 600;
+        font-size: 15px;
         border-radius: 5px;
     }
 
     .add-todo-form-btn-add{
         background-color: $primary-main;
-
         color: $neutral-00;
-
         margin-left: 0.6rem;
     }
 
     .add-todo-form-btn-cancel{
         background-color: $neutral-00;
-
         color: $neutral-20;
     }
 
     button:hover{
         cursor:pointer;
         background-color: $primary-light;
+        color: $neutral-00;
     }
+    
+}
+
+//tablet
+@media (min-width: 950px ) {
+
+    .box{
+        top:15%;
+        width:40%;   
+    }
+
+}
+
+
+//desktop
+@media (min-width: 1430px) {
+  
+   .box{
+        width:30%; 
+    }
+
 }
 

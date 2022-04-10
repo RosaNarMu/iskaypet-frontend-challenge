@@ -17,21 +17,30 @@ export default function ToDoDisplay() {
         axiosTodos();
     }, []);
 
+    //controls popup visibility
     const togglePopup = () => {
         setIsOpen(!isOpen);
+    };
+
+    //deletes todo
+    const removeTodo = (title) => {
+        setTodos(todos.filter(todo => todo.title !== title));
     };
 
     return (
         <main>
             <span>Mis tareas</span>
             <div className='todo-container'>
-                {todos && todos.map(({ id, title, body }) => (
-                    <div key={id} className='todo-card'>
+                {todos && todos.map(({ id, title, description }) => (
+                    <div key={title} className='todo-card'>
                         <div className='todo-text'>
-                            <span>Tarea {id}</span>
-                            <p>{title}</p>
+                            <span>{title}</span>
+                            {description &&
+
+                                <p>{title}</p>
+                            }
                         </div>
-                        <button>
+                        <button onClick={() => removeTodo(title)}>
 
                             <img src="/assets/trash 1.png" alt="Delete icon" className='todo-delete' />
                         </button>
@@ -41,7 +50,7 @@ export default function ToDoDisplay() {
             </div>
 
             {isOpen && <AddToDo
-                togglePopup={togglePopup}
+                togglePopup={togglePopup} setTodos={setTodos}
             />
             }
 

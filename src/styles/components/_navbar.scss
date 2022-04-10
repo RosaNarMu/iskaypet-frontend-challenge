@@ -1,21 +1,16 @@
 .navbar{
-    
-    overflow-x: scroll;
-    scrollbar-width: none; 
+    overflow-x: scroll; //allow scroll
+    scrollbar-width: none; //hides scroll bar 
     background-color: $neutral-00;
-
     box-shadow: 0px 3px 2px rgba(71, 67, 67, 0.192);
 }
 
 
 .navbar-container{
     display: flex;
-    
     padding-left: 0.75rem;
-    
     gap: 1.5rem;
 
-  
    li {
     white-space: nowrap;
     padding-top:13px;
@@ -23,14 +18,12 @@
     padding-left: 20px;
     padding-right: 20px;
     
-
     font-weight: 600;
     color: $neutral-60;
    }
 
    li:hover{
     cursor:pointer;
-
     border-color: $primary-main;
     border-bottom-style: solid;
     }
@@ -38,10 +31,33 @@
    .active{
     font-weight: 700;
     color: $primary-main;
-
     border-bottom-style: solid;
     }
 
+}
+
+//tablet
+@media (min-width: 950px ) {
+
+    .navbar-container{
+        justify-content: space-evenly;
+    }
+    
+}
+
+
+//desktop
+@media (min-width: 1430px) {
+  
+   .navbar{
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+
+    .navbar-container{
+        gap:0.5rem;
+    }
+    
 }
 
 

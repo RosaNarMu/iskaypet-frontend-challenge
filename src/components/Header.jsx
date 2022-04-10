@@ -1,5 +1,5 @@
-
 export default function Header() {
+
     return (
         <header>
             <img src="/assets/Menu.png" alt="Menu icon" />

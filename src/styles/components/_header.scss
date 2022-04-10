@@ -1,11 +1,9 @@
 header{
     background-color: $neutral-00;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0px;
     
     width: 379px;
     height: 26px;
@@ -13,10 +11,30 @@ header{
     padding-right: calc(50% - 378px/2 - 1px);
     padding-top: 18px;
     padding-bottom: 18px;
-
     border-bottom: 1px solid $neutral-10 ;
 
     img:hover{
         cursor:pointer;
     }
+}
+
+//tablet
+@media (min-width: 950px ) {
+  
+    header{
+        justify-content: space-evenly;
+        width: 100%;
+        height: 26px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+}
+
+
+//desktop
+@media (min-width: 1430px) {
+  
+
+
 }

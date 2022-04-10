@@ -1,7 +1,4 @@
-
 export default function Navbar() {
-
-
 
     return (
         <nav className="navbar">
@@ -12,8 +9,6 @@ export default function Navbar() {
                 <li>Mis comunicaciones</li>
                 <li>Mis mejores amigos</li>
             </ul>
-
         </nav>
-
     )
 }
