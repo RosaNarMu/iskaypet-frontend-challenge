@@ -11,7 +11,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 1. In order to get a local copy up and running you will need to clone the repo:
 
 ```
-git clone https://github.com/RosaNarMu/iskaypet-frontend-challege
+git clone https://github.com/RosaNarMu/iskaypet-frontend-challenge
 ```
 2. Then, install the NPM packages in the project folder with:
 
